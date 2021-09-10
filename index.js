@@ -1,3 +1,4 @@
+
 const artists = [
   {
     "id": 0,
@@ -209,7 +210,8 @@ Practice accessing data above by console.log-ing following items:
 
 //(1) Name of the first artist (0th index) in the array
 
-console.log(artists[1]["name"]);
+console.log(artists[0]["name"]);
+
 //(2) Bio of the third artist (2nd index) in the array 
 
 console.log(artists[2]["bio"]);
@@ -218,9 +220,8 @@ console.log(artists[2]["bio"]);
 (no function needed) 
 There is a typo in your dataset 😱 The 9th artist, Vincent Van Gogh is currently Vincent Van Dough. Fix this issue and console.log() to check your work. */
 
-// artists[8]["name"]="Vincent Van Gogh";
+artists[8]["name"]="Vincent Van Gogh";
 console.log(artists[8].name);
-
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 3: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀  
 Use getArtistByIndex to do the following:
@@ -234,6 +235,7 @@ function getArtistByIndex(array, num) {
   return `the artist at index ${num} is ${artists[num]["name"]}`;
 }
 console.log(getArtistByIndex(artists, 0));
+
 
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 4: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
@@ -261,8 +263,7 @@ function get20s(array) {
 }
 console.log(get20s(artists));
 
-
-
+console.log(get20s (artists));
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 5: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
 Use removeArtist to do the following:
@@ -312,26 +313,25 @@ function addArtist(array) {
 console.log(addArtist(artists) );
 
 
-
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 7: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
 Use lotsOfArt to do the following: 
 1. Receive an array 
 2. Return an array with names of artists in the received array who painted more than 100 paintings.
 For example lotsOfArt(artists); will return ["Amedeo Modigliani", "Rene Magritte", ... "Albrecht Dürer"]*/
 
-function lotsOfArt(array){
+
+
+function lotsOfArt(array ){
   /*Your Code Here*/
   let newarr = [];
   for (let i = 0; i < array.length; i++) {
       if(array[i].paintings >= 100){
-          newarr.push(artists[i].name);
+          newarr.push(array[i].name);
       }
   }
   return newarr;
 }
-console.log(lotsOfArt(artists));
-
-
+console.log( lotsOfArt(artists) );
 /* ***** END OF TASKS ***** */
 
 
